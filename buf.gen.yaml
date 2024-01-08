@@ -1,0 +1,10 @@
+version: v1
+managed:
+  enabled: true
+plugins:
+  - plugin: buf.build/grpc/python:v1.59.3
+    out: src/grpc_buf/gen
+  - plugin: buf.build/protocolbuffers/python:v25.1
+    out: src/grpc_buf/gen
+  - plugin: buf.build/protocolbuffers/pyi:v25.1
+    out: src/grpc_buf/gen

@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+service ExampleApi {
+  rpc GetExample(GetExampleRequest) returns (GetExampleResponse);
+  rpc CreateExample(CreateExampleRequest) returns (CreateExampleResponse);
+}
+
+message Example {
+  string id = 1;
+  string name = 2;
+}
+
+message GetExampleRequest {
+  string id = 1;
+}
+
+message GetExampleResponse {
+  Example example = 1;
+}
+
+message CreateExampleRequest {
+  Example example = 1;
+}
+
+message CreateExampleResponse {
+  Example example = 1;
+}
+
+message UpdateExampleRequest {
+  Example example = 1;
+}
+
+message UpdateExampleResponse {
+  Example example = 1;
+}
+
+message DeleteExampleRequest {
+  string id = 1;
+}
+
+message DeleteExampleResponse {
+  Example example = 1;
+}
+
+message GetStreamExampleRequest {
+  string id = 1;
+}
+
+message GetStreamExampleResponse {
+  Example example = 1;
+}
